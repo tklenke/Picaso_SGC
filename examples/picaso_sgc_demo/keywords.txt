@@ -1,0 +1,29 @@
+#######################################
+# Syntax Coloring Map For displayshield4d
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+DisplayShield4d			KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+Init		KEYWORD2
+Reset			KEYWORD2
+Clear			KEYWORD2
+GetReply		KEYWORD2
+get16bitRGB		KEYWORD2
+SetPenSize		KEYWORD2
+putpixel		KEYWORD2
+line			KEYWORD2
+rectangle		KEYWORD2
+circle			KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
