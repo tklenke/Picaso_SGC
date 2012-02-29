@@ -28,23 +28,13 @@
 
 	Instalation
 	============================================================================
-	(I want to make this a library, but I'm having some issues with how to include
-	SoftwareSerial correctly.  So for now do the following)
-	-Start a new sketch
-	-Save sketch with name of your choice...IDE will create a directory with that name
-	-Close that IDE window
-	-Copy picaso_sgc.cpp and picaso_sgc.h to that sketch's directory
-	-Open the IDE and open that project
-		picaso_sgc.cpp and picaso_sgc.h should be new tabs in the IDE window.
-	-Add following to your sketch
-		#include <SoftwareSerial.h>
-		#include "picaso_sgc.h"
-	
+	Install folder Picaso_SGC into Arduino Libraries folder 
+		(required files are picaso_sgc.h and picaso_sgc.cpp)	
 
 	Tested on the Arduino IDE 1.0, Arduino Uno and 4DSystems µVGA-II(SGC)
 
 	General information
 	============================================================================
-	
+	Usage:  #include <picaso_sgc.h> in your project.  See included example.
 	
 */
