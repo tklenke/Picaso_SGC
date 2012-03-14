@@ -403,8 +403,6 @@ uint8_t PicasoSGC::DrawStringAtRowCol(uint8_t row, uint8_t column, uint8_t font,
         int i = 0;
         int len;
 	
-		SetFont(font);
-		
 	sSerial->write(PIC_DRAW_STRING_TEXT_FORMAT);
 
 	sSerial->write(column);
@@ -436,6 +434,8 @@ uint8_t PicasoSGC::DrawStringAtRowCol(uint8_t row, uint8_t column, uint8_t font,
  ********************************************************/
 uint8_t PicasoSGC::DrawCharAtRowCol(uint8_t row, uint8_t column, uint8_t font, uint8_t red, uint8_t green, uint8_t blue, char cChar)
 {
+	SetFont(font);
+
 	sSerial->write(PIC_DRAW_CHAR_TEXT_FORMAT);
 
 	sSerial->write(cChar);
