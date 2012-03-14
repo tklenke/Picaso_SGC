@@ -441,10 +441,8 @@ uint8_t PicasoSGC::DrawCharAtRowCol(uint8_t row, uint8_t column, uint8_t font, u
 	sSerial->write(cChar);
 	sSerial->write(column);
 	sSerial->write(row);
-	sSerial->write(font);
-        WriteColor(red, green, blue);
+    WriteColor(red, green, blue);
         
-
 	return ValidAck();
 }
 
