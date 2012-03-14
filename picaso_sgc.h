@@ -125,6 +125,7 @@
 			uint8_t SetFont(uint8_t font_type);
                         uint8_t SetTransparentOpaqueText(uint8_t text_mode);
 			uint8_t DrawStringAtRowCol(uint8_t row, uint8_t column, uint8_t font, uint8_t red, uint8_t green, uint8_t blue, char *text);
+			uint8_t DrawCharAtRowCol(uint8_t row, uint8_t column, uint8_t font, uint8_t red, uint8_t green, uint8_t blue, char cChar);
 
 
 		private:

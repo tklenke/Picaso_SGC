@@ -402,6 +402,9 @@ uint8_t PicasoSGC::DrawStringAtRowCol(uint8_t row, uint8_t column, uint8_t font,
 {
         int i = 0;
         int len;
+	
+		SetFont(font);
+		
 	sSerial->write(PIC_DRAW_STRING_TEXT_FORMAT);
 
 	sSerial->write(column);
@@ -417,6 +420,30 @@ uint8_t PicasoSGC::DrawStringAtRowCol(uint8_t row, uint8_t column, uint8_t font,
           sSerial->write(text[i]);
 
 	sSerial->write(PIC_STRINGTERMINATOR); // String terminator
+
+	return ValidAck();
+}
+
+/*******************************************************
+	Function: 
+		DrawCharAtRowCol
+	Description:
+		This command will  change the attribute of the text so that an object behind the text can either be blocked or transparent.
+	Params:
+		Row Column
+	Return:	
+		0 if succesful or 1 if not
+ ********************************************************/
+uint8_t PicasoSGC::DrawCharAtRowCol(uint8_t row, uint8_t column, uint8_t font, uint8_t red, uint8_t green, uint8_t blue, char cChar)
+{
+	sSerial->write(PIC_DRAW_CHAR_TEXT_FORMAT);
+
+	sSerial->write(cChar);
+	sSerial->write(column);
+	sSerial->write(row);
+	sSerial->write(font);
+        WriteColor(red, green, blue);
+        
 
 	return ValidAck();
 }

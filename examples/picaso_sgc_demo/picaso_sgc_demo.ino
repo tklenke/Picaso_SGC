@@ -23,8 +23,8 @@
 #include <SoftwareSerial.h>
 #include <picaso_sgc.h>
 
-#define RXPIN 2
-#define TXPIN 3
+#define RXPIN 12
+#define TXPIN 13
 #define RESETPIN 8
 
 PicasoSGC  pic;
@@ -57,6 +57,8 @@ void setup()
   
   Serial.println(pic.DrawStringAtRowCol(10,10,PIC_FONT_PROPORTIONAL_12X16,255,255,255,"Pro 12x16"));
   Serial.println(pic.DrawStringAtRowCol(11,10,PIC_FONT_MON0_12X16,255,255,255,"Mono 12x16"));
+  
+  Serial.println(pic.DrawCharAtRowCol(12,10,PIC_FONT_MON0_12X16,255,255,255,'A'));
   
   Serial.println("done setup");
 }
