@@ -385,7 +385,7 @@ uint8_t PicasoSGC::DrawRectangle(unsigned int x, unsigned int y, unsigned int wi
     }
     
     x2 = x+width;
-    y2 = y+width;
+    y2 = y+height;
     sSerial->write(PIC_DRAW_RECTANGLE);
 
     sSerial->write(x >> 8);            // MSB
